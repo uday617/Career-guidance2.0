@@ -1,0 +1,126 @@
+/* college-list.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  padding: 20px;
+  color: #020202;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* College Grid Container */
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  justify-items: center;
+}
+
+/* College Card */
+.college-card {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 15px;
+  color: #da2828;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* College Name */
+.college-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+/* Info Text */
+.college-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Action Link */
+.college-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.college-card a:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .college-card {
+    padding: 15px;
+  }
+  .college-card h3 {
+    font-size: 1.1rem;
+  }
+  .college-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .college-card {
+    padding: 12px;
+  }
+  .college-card h3 {
+    font-size: 1rem;
+  }
+  .college-card p {
+    font-size: 0.85rem;
+  }
+  .college-card a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

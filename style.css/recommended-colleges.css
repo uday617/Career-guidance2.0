@@ -1,0 +1,128 @@
+/* recommended-colleges.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #2621af;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* College List Container */
+#college-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* College Card */
+.college-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* College Name */
+.college-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* College Info */
+.college-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: rgba(1, 1, 1, 0.9);
+}
+
+/* Links */
+.college-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #f7f2f2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.college-card a:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .college-card {
+    padding: 15px;
+  }
+
+  .college-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .college-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Small Phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #college-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .college-card {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .college-card a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

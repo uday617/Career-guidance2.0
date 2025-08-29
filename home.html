@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Guidance</title>
+  <link rel="stylesheet" href="style.css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎓 <span>Career Guidance</span></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="college-list.html" id="collegeLink">Colleges</a></li>
+        <li><a href="aptitude-test.html" id="aptitudeLink">Aptitude Test</a></li>
+        <li id="nav-auth-item">
+          <a href="login.html" id="loginLink">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Find Your Perfect College Match</h1>
+    <p>Discover engineering and management colleges in India and abroad based on your preferences and aptitude</p>
+    <a href="user-details.html" class="cta-button" id="getStartedBtn">Get Started</a>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="icon">🎓</div>
+        <h3>1. Create Profile</h3>
+        <p>Tell us about your academic background, interests, and career goals.</p>
+      </div>
+      <div class="step">
+        <div class="icon">📝</div>
+        <h3>2. Take Aptitude Test</h3>
+        <p>Assess your strengths with our comprehensive verbal, quantitative, and GK test.</p>
+      </div>
+      <div class="step">
+        <div class="icon">🏛️</div>
+        <h3>3. Get Recommendations</h3>
+        <p>Receive personalized college suggestions based on your profile and test results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <!-- Firebase Config + JS -->
+  <script src="script.js/firebase-config.js"></script>
+  <script src="script.js/scripts.js"></script> <!-- JS handles login-check + nav -->
+</body>
+</html>

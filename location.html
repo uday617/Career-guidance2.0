@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Location</title>
+  <link rel="stylesheet" href="style.css/location.css">
+</head>
+<body>
+
+  <div class="location-container">
+    <h2>Select Your Location</h2>
+
+    <!-- Step 1: Choose India or Abroad -->
+    <div class="btn-group">
+      <button class="location-btn" data-location="India">India</button>
+      <button class="location-btn" data-location="Abroad">Abroad</button>
+    </div>
+
+    <!-- Step 2: Choose Country (only if Abroad selected) -->
+    <div id="countrySelectContainer" style="display: none;">
+      <label for="country">Choose Country:</label>
+      <select id="country">
+        <option value="">--Select--</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+      </select>
+    </div>
+</div>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="script.js/firebase-config.js"></script>
+  <script src="script.js/location.js"></script>
+</body>
+</html>

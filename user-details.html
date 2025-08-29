@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+    <link rel="stylesheet" href="style.css/user-details.css" />
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Fill Your Details</h1>
+        <form id="userDetailsForm">
+            <input type="text" id="firstName" placeholder="First Name" required />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <input type="text" id="mobile" placeholder="Mobile Number" required />
+            <input type="email" id="email" placeholder="Email" disabled />
+
+            <input type="number" id="tenthPercent" placeholder="10th Percentage" required />
+            <input type="number" id="twelfthPercent" placeholder="12th Percentage" required />
+
+            <select id="twelfthStream" required>
+                <option value="">Select 12th Stream</option>
+                <option value="Science-Math">Science-Math</option>
+                <option value="Science-Bio">Science-Bio</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>
+
+            </select>
+
+            <select id="interest" required>
+                <option value="">Interested In</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Medical">Medical</option>
+                <option value="Law">Law</option>
+            </select>
+
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <script src="script.js/firebase-config.js"></script>
+    <script src="script.js/user-details.js"></script>
+</body>
+
+</html>

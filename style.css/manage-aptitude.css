@@ -1,0 +1,183 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f3f6fa;
+}
+
+/* Header */
+header {
+  background-color: #222e50;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.back-btn {
+  background: #00b894;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #019875;
+}
+
+/* Main Container */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Form */
+form {
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+button[type="submit"] {
+  background: #0984e3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #0767b5;
+}
+
+/* Question List */
+#questionList h2 {
+  margin-bottom: 16px;
+}
+
+.question-card {
+  background: #f7f9fc;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid #00cec9;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.question-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* Actions */
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #f1c40f;
+  color: #000;
+}
+
+.delete-btn {
+  background: #d63031;
+  color: #fff;
+}
+
+/* Stream Card */
+.stream-card {
+  border-left: 5px solid teal;
+  background: #f4f8fc;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+
+.stream-card h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button[type="submit"],
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  input, select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

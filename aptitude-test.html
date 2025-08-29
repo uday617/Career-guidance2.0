@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aptitude Test</title>
+  <link rel="stylesheet" href="style.css/aptitude-test.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="timer" class="timer">Time Left: 30:00</div>
+    <h2>Aptitude Test</h2>
+    <p id="stream-title">Loading test...</p>
+
+    <form id="aptitude-form">
+      <div id="questions-container">
+        <!-- Questions will load here dynamically -->
+      </div>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+  </div>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="script.js/firebase-config.js"></script>
+  <script src="script.js/aptitude-test.js"></script>
+</body>
+</html>

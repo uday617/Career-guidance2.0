@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Career Guidance — Dashboard</title>
+  <link rel="stylesheet" href="style.css/dashboard.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">CareerGuidance</div>
+    <div class="top-right">
+      <span id="welcomeName">Welcome</span>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Left Column -->
+    <aside class="left-col">
+      <div class="card profile-card">
+        <div class="avatar">👤</div>
+        <h2 id="fullName">Full Name</h2>
+        <p id="email">Email</p>
+        <p id="mobile">Mobile</p>
+        <div class="profile-stats">
+          <div><strong>10th</strong>
+            <div id="tenthPercentage">%</div>
+          </div>
+          <div><strong>12th</strong>
+            <div id="twelfthPercentage">%</div>
+          </div>
+          <div><strong>Stream</strong>
+            <div id="twelfthStream">-</div>
+          </div>
+        </div>
+
+        <p><strong>Interest:</strong> <span id="interest">-</span></p>
+        <p><strong>Location:</strong> <span id="location">-</span></p>
+        <p><strong>CGPA:</strong> <span id="cgpa">-</span></p>
+      </div>
+
+      <div class="card quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="college-list.html">View All Colleges</a></li>
+          <li><a href="recommended-colleges.html">All Recommendations</a></li>
+        </ul>
+      </div>
+
+      <div class=" card progressTracker">
+      <div id="progressTracker"></div>
+    </div>
+    </aside>
+
+
+    <!-- Right Column -->
+    <section class="right-col">
+      <div class="card">
+        <h3>Aptitude Test</h3>
+        <div id="aptitudeStatus">
+          Score: <span id="aptitudeScore">-</span> /
+          <span id="totalQuestions">-</span> questions
+        </div>
+        <div id="aptitudeAction">Loading...</div>
+      </div>
+
+      <div class="card">
+        <h3>Career Recommendations</h3>
+        <div id="careerRecommendations" class="list"></div>
+      </div>
+
+      <div class="card">
+        <h3>College Recommendations</h3>
+        <div id="collegeRecommendations" class="list">
+          <div id="college-list"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Upcoming Deadlines</h3>
+        <ul id="deadlinesList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Firebase (v8 CDN) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Your firebase-config -->
+  <script src="script.js/firebase-config.js"></script>
+
+  <!-- Dashboard logic -->
+  <script src="script.js/dashboard.js"></script>
+</body>
+
+</html>

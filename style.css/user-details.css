@@ -1,0 +1,106 @@
+/* user-details.css */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #080808;
+  font-size: 1.8rem;
+}
+
+/* Inputs & Selects */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+  transition: 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  box-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+}
+
+.form-container input::placeholder,
+.form-container select {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.form-container select option {
+  color: #333;
+}
+
+/* Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  .form-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

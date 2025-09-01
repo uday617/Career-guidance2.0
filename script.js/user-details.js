@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const docSnap = await docRef.get();
 
             if (docSnap.exists() && docSnap.data().firstName) {
-                // Agar pehle hi data hai → direct redirect
+                // direct redirect
                 window.location.href = "aptitude-test.html"; 
                 return;
             }

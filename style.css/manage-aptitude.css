@@ -144,7 +144,7 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
-/* 📱 Responsive */
+/*  Responsive */
 @media (max-width: 768px) {
   main {
     padding: 20px;

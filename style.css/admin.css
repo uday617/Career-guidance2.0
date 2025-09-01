@@ -199,8 +199,8 @@ nav a:hover {
 }
 /* View Details Button */
 .details-btn{
-  background-color: #ecf0f1; /* light grey */
-  color: #2c3e50; /* dark text */
+  background-color: #ecf0f1; 
+  color: #2c3e50;
   padding: 6px 14px;
   border: none;
   border-radius: 6px;

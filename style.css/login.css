@@ -91,7 +91,7 @@ body {
   text-decoration: underline;
 }
 
-/* ✅ Responsive Design */
+/* Responsive Design */
 @media (max-width: 480px) {
   .login-container {
     padding: 25px 20px;

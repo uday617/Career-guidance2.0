@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // ✅ Firestore instance
+  //  Firestore instance
   window.firestore = firebase.firestore();
 
   // 1️⃣ Auth State Check
@@ -74,11 +74,11 @@ window.addEventListener("DOMContentLoaded", () => {
           const data = doc.data();
 
           if (data.firstName && data.testCompleted) {
-            window.location.href = "location.html"; // form + test complete
+            window.location.href = "location.html"; 
           } else if (data.firstName) {
-            window.location.href = "aptitude-test.html"; // sirf form complete
+            window.location.href = "aptitude-test.html"; 
           } else {
-            window.location.href = "user-details.html"; // kuch bhi complete nahi
+            window.location.href = "user-details.html"; 
           }
         } else {
           window.location.href = "user-details.html";

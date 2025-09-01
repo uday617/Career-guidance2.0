@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let editId = null;
 
-  // 🧠 Load and group questions by stream
+  //  Load and group questions by stream
   function loadQuestions() {
     questionList.innerHTML = "<h3>All Questions</h3>";
 
@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ Form Submission (add/edit)
+  //  Form Submission 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -94,15 +94,6 @@ window.addEventListener("DOMContentLoaded", () => {
       options: { A: optionA, B: optionB, C: optionC, D: optionD },
       correct,
     };
-
-    // OPTIONAL: Max 10 questions per stream
-    // if (!editId) {
-    //   const count = await db.collection("aptitude_tests").where("stream", "==", stream).get();
-    //   if (count.size >= 10) {
-    //     alert("Only 10 questions allowed per stream.");
-    //     return;
-    //   }
-    // }
 
     if (editId) {
       db.collection("aptitude_tests").doc(editId).update(data).then(() => {

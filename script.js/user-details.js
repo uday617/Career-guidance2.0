@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // ✅ Pre-fill email
+        //  Pre-fill email
         emailInput.value = user.email;
 
         try {
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const docSnap = await docRef.get();
 
             if (docSnap.exists() && docSnap.data().firstName) {
-                // ✅ Agar pehle hi data hai → direct redirect
+                // Agar pehle hi data hai → direct redirect
                 window.location.href = "aptitude-test.html"; 
                 return;
             }
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
             console.error("Error checking user data:", err.message);
         }
 
-        // ✅ Form submit handler (only if data doesn't exist)
+        //  Form submit handler 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
 

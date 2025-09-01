@@ -48,7 +48,6 @@ auth.onAuthStateChanged(async (user) => {
       );
     });
 
-    // Render
     if (filtered.length === 0) {
       collegesList.innerHTML = "<p>No recommended colleges found based on your profile.</p>";
     } else {
@@ -83,7 +82,7 @@ auth.onAuthStateChanged(async (user) => {
 });
 
 async function applyToCollege(e, collegeId, collegeName, alreadyApplied, applyUrl) {
-  e.preventDefault(); // prevent default click to handle logic first
+  e.preventDefault(); 
 
   const user = auth.currentUser;
   if (!user) {
@@ -106,7 +105,7 @@ async function applyToCollege(e, collegeId, collegeName, alreadyApplied, applyUr
       alert("You have already applied to this college.");
     }
 
-    // ✅ Always redirect after click
+    //  Always redirect after click
     window.location.href = applyUrl;
 
   } catch (err) {

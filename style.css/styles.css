@@ -90,7 +90,6 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* How It Works */
 .how-it-works {
   padding: 80px 20px;
   text-align: center;
@@ -306,7 +305,7 @@ nav ul li a:hover {
   .dropdown-content span {
     text-align: center;
     font-size: 14px;
-    word-break: break-word; /* agar email lamba ho to wrap ho jaye */
+    word-break: break-word; 
   }
 }
 

@@ -269,7 +269,7 @@ auth.onAuthStateChanged(async (user) => {
       renderCareerRecommendations(userData.interest || "", userData.cgpa || 0);
       fetchCollegeRecommendations(userData);
       fetchDeadlines();
-      fetchProgressionTracker(uid); // ✅ Added progression tracker
+      fetchProgressionTracker(uid); 
     } else {
       renderProfile({});
     }

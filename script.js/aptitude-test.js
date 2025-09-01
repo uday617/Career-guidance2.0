@@ -15,9 +15,9 @@ firebase.auth().onAuthStateChanged((user) => {
   let correctAnswers = [];
   let totalQuestions = 0;
   let timerInterval;
-  let totalTime = 30 * 60; // 30 minutes in seconds
+  let totalTime = 30 * 60; 
 
-  // ✅ STEP 1: Check if user-details are filled
+  //  STEP 1: Check if user-details are filled
   firebase.firestore().collection("users").doc(userId).get().then((doc) => {
     if (!doc.exists) {
       alert("Please fill your details before taking the test.");
@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged((user) => {
       return;
     }
 
-    // ✅ If test already completed, skip to location page
+    // If test already completed, skip to location page
     if (userData.testCompleted) {
       window.location.href = "location.html";
       return;
@@ -118,7 +118,7 @@ firebase.auth().onAuthStateChanged((user) => {
           wrong++;
         }
       } else {
-        wrong++; // Not answered counts as wrong
+        wrong++; 
       }
     }
 
@@ -136,7 +136,7 @@ firebase.auth().onAuthStateChanged((user) => {
       <p>Estimated CGPA: <strong>${cgpa}</strong></p>
     `;
 
-    // ✅ Save result in Firebase
+    //  Save result in Firebase
     firebase.firestore().collection("users").doc(userId).set({
       aptitudeScore: score,
       totalQuestions: totalQuestions,
@@ -148,11 +148,11 @@ firebase.auth().onAuthStateChanged((user) => {
     })
     .catch(err => console.error("Error saving score:", err));
 
-    // ✅ Hide original Submit button
+    // Hide original Submit button
     const submitBtn = document.querySelector("#aptitude-form button[type='submit']");
     if (submitBtn) submitBtn.style.display = "none";
 
-    // ✅ Add "Next" button
+    //  Add "Next" button
     const nextBtn = document.createElement("button");
     nextBtn.textContent = "Next";
     nextBtn.style.marginTop = "20px";
@@ -166,6 +166,6 @@ firebase.auth().onAuthStateChanged((user) => {
   // Manual Submit Handler
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    submitTest(false); // Manual submit
+    submitTest(false); 
   });
 });

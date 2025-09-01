@@ -83,7 +83,7 @@ select {
   font-size: 1rem;
 }
 
-/* ✅ Responsive adjustments */
+/*  Responsive adjustments */
 @media (max-width: 480px) {
   .location-container {
     padding: 25px 20px;

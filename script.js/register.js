@@ -9,7 +9,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     .then((userCredential) => {
       const user = userCredential.user;
 
-      // ✅ Save to Firestore
+      //  Save to Firestore
       window.db.collection("users").doc(user.uid).set({
         email: user.email,
         uid: user.uid,

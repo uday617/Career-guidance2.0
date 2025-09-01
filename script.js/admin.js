@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // ✅ Auth check
+    //  Auth check
     auth.onAuthStateChanged((user) => {
         if (!user) {
             window.location.href = "login.html";
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ✅ Logout
+    //  Logout
     const logoutBtn = document.getElementById("logoutBtn");
     if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {

@@ -5,12 +5,12 @@ const countrySelect = document.getElementById('country');
 
 let selectedLocationType = '';
 
-// Handle India / Abroad click
+
 locationBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     selectedLocationType = btn.dataset.location;
 
-    // Highlight selected button
+    
     locationBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
@@ -22,7 +22,7 @@ locationBtns.forEach(btn => {
   });
 });
 
-// Handle country selection
+
 countrySelect.addEventListener('change', () => {
   if (countrySelect.value) {
     saveLocationAndRedirect(countrySelect.value);
